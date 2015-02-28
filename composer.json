@@ -1,6 +1,6 @@
 {
   "name": "kappa/assets-publisher",
-  "description": "Basic macros for better works with src and href attribute ",
+  "description": "Basic macros for better works with src and href attribute",
   "keywords": ["macros", "nette", "assets", "publisher"],
   "homepage": "https://github.com/Kappa-org/AssetsPublisher",
   "license": "BSD-3-Clause",
