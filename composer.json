@@ -1,0 +1,26 @@
+{
+  "name": "kappa/assets-publisher",
+  "description": "Basic macros for better works with src and href attribute ",
+  "keywords": ["macros", "nette", "assets", "publisher"],
+  "homepage": "https://github.com/Kappa-org/AssetsPublisher",
+  "license": "BSD-3-Clause",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Ondřej Záruba",
+      "homepage": "http://zaruba-ondrej.cz"
+    }
+  ],
+  "support": {
+    "email": "zarubaondra@gmail.com",
+    "issues": "https://github.com/Kappa-org/AssetsPublisher/issues"
+  },
+  "require-dev": {
+    "nette/tester": "~1.0@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "Kappa\\AssetsPublisher\\": "src/"
+    }
+  }
+}
