@@ -25,6 +25,9 @@
   "autoload": {
     "psr-4": {
       "Kappa\\AssetsPublisher\\": "src/"
-    }
+    },
+    "classmap": [
+      "src/exceptions.php"
+    ]
   }
 }
