@@ -17,7 +17,8 @@
   },
   "require": {
     "latte/latte": "~2.2@dev",
-    "nette/di": "~2.2@dev"
+    "nette/di": "~2.2@dev",
+    "nette/utils": "~2.2@dev"
   },
   "require-dev": {
     "nette/tester": "~1.0@dev"
