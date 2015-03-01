@@ -51,3 +51,6 @@ Now in template you can link files placed outside of public directory
 <img n:source="/not/public/directory/image.png"> {* this create <img src="/assets/fa465asd12sadad.png"> *}
 <link n:source="/not/public/directory/style.css"> {* this create <link href="/assets/fa465asd12sadad.css"> *}
 ```
+
+**Note:** Macro automatically decide when to use `src` or `href` attribute. For more information please see [attributes
+section](http://www.w3.org/html/wg/drafts/html/master/index.html#web+-scheme-prefix)
