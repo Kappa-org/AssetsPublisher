@@ -5,6 +5,9 @@ Basic macros for better works with src and href attribute
 ## Requirements
 
 * PHP 5.4 or higher
+* [nette/latte](https://github.com/nette/latte)
+* [nette/di](https://github.com/nette/di)
+* [nette/utils](https://github.com/nette/utils)
 
 ## Installation:
 
