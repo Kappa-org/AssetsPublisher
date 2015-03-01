@@ -21,7 +21,8 @@ use Nette\DI\CompilerExtension;
 class AssetsPublisherExtension extends CompilerExtension
 {
 	private $defaultConfig = [
-		'assetsDir' => '%appDir%/../www/assets'
+		'documentRoot' => '%wwwDir%',
+		'assetsDir' => '/assets'
 	];
 
 	public function loadConfiguration()
@@ -35,6 +36,7 @@ class AssetsPublisherExtension extends CompilerExtension
 		$builder->addDefinition($this->prefix('publisher'))
 			->setClass('Kappa\AssetsPublisher\Publisher', [
 				$this->prefix('@hashGenerator'),
+				$config['documentRoot'],
 				$config['assetsDir']
 			]);
 	}

@@ -36,7 +36,7 @@ class PublisherTest extends TestCase
 	{
 		$generatorMock = \Mockery::mock('Kappa\AssetsPublisher\Generators\HashGeneratorInterface');
 		$generatorMock->shouldReceive('getHash')->once()->andReturn(self::OUTPUT_NAME);
-		$this->publisher = new Publisher($generatorMock, TEMP_DIR);
+		$this->publisher = new Publisher($generatorMock, TEMP_DIR, '');
 
 		$outputFile = TEMP_DIR . DIRECTORY_SEPARATOR . self::OUTPUT_NAME . '.js';
 		if (file_exists($outputFile)) {

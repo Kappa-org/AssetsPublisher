@@ -24,17 +24,22 @@ class Publisher
 	/** @var string */
 	private $assetsDir;
 
+	/** @var string */
+	private $documentRoot;
+
 	/** @var HashGeneratorInterface */
 	private $hashGenerator;
 
 	/**
 	 * @param HashGeneratorInterface $hashGenerator
+	 * @param string $documentRoot
 	 * @param string $assetsDir
 	 */
-	public function __construct(HashGeneratorInterface $hashGenerator, $assetsDir)
+	public function __construct(HashGeneratorInterface $hashGenerator, $documentRoot, $assetsDir)
 	{
-		$this->assetsDir = $assetsDir;
 		$this->hashGenerator = $hashGenerator;
+		$this->documentRoot = $documentRoot;
+		$this->assetsDir = $assetsDir;
 	}
 
 	/**
@@ -46,12 +51,12 @@ class Publisher
 		$assetsDir = $this->getAssetsDir();
 		$hash = $this->hashGenerator->getHash($source);
 		$ext = pathinfo($source, PATHINFO_EXTENSION);
-		$path = $assetsDir . DIRECTORY_SEPARATOR . $hash . '.' . $ext;
+		$path = $this->documentRoot . DIRECTORY_SEPARATOR . $assetsDir . DIRECTORY_SEPARATOR . $hash . '.' . $ext;
 		if (!file_exists($path)) {
 			FileSystem::copy($source, $path, false);
 		}
 
-		return $path;
+		return str_replace($this->documentRoot, '', realpath($path));
 	}
 
 	/**
@@ -59,8 +64,9 @@ class Publisher
 	 */
 	private function getAssetsDir()
 	{
-		if (!is_dir($this->assetsDir)) {
-			FileSystem::createDir($this->assetsDir);
+		$dir = $this->documentRoot . DIRECTORY_SEPARATOR . $this->assetsDir;
+		if (!is_dir($dir)) {
+			FileSystem::createDir($dir);
 		}
 
 		return $this->assetsDir;
