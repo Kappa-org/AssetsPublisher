@@ -53,4 +53,5 @@ Now in template you can link files placed outside of public directory
 ```
 
 **Note:** Macro automatically decide when to use `src` or `href` attribute. For more information please see [attributes
-section](http://www.w3.org/html/wg/drafts/html/master/index.html#web+-scheme-prefix)
+section](http://www.w3.org/html/wg/drafts/html/master/index.html#web+-scheme-prefix) or this 
+[implementation](https://github.com/Kappa-org/AssetsPublisher/blob/master/src/Macros/SourceMacro.php#L54-L55)
