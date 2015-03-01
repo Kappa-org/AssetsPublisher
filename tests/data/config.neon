@@ -1,0 +1,2 @@
+extensions:
+	- Kappa\AssetsPublisher\DI\AssetsPublisherExtension
