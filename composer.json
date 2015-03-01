@@ -23,7 +23,8 @@
   "require-dev": {
     "nette/tester": "~1.0@dev",
     "mockery/mockery": "~0.9@dev",
-    "tracy/tracy": "~2.2@dev"
+    "tracy/tracy": "~2.2@dev",
+    "nette/nette": "~2.2@dev"
   },
   "autoload": {
     "psr-4": {
