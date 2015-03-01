@@ -20,3 +20,14 @@ class DirectoryNotFoundException extends \LogicException
 {
 
 }
+
+/**
+ * Class UnsupportedTagNameException
+ *
+ * @package Kappa\AssetsPublisher
+ * @author Ondřej Záruba <http://zaruba-ondrej.cz>
+ */
+class UnsupportedTagNameException extends \LogicException
+{
+
+}
